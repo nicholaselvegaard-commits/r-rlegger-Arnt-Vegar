@@ -8,6 +8,7 @@
 body {
     background: #061c2f;
     color: #0f172a;
+    overflow-x: hidden;
 }
 
 /* FORSIDE */
@@ -33,17 +34,17 @@ body {
     position: relative;
 }
 
-/* BLÅ LINJER */
+/* BLÅ DESIGN-LINJER (desktop) */
 .card::before {
     content: "";
     position: absolute;
-    top: -20px;
-    left: -20px;
+    top: -18px;
+    left: -18px;
     width: 120px;
     height: 120px;
     border-top: 3px solid #4aa3df;
     border-left: 3px solid #4aa3df;
-    border-radius: 12px;
+    border-radius: 14px;
 }
 
 .text-card h1,
@@ -65,14 +66,11 @@ body {
     gap: 40px;
 }
 
-.split.reverse {
-    grid-template-columns: 1fr 1fr;
-}
-
 /* BILDER */
 img {
     width: 100%;
     border-radius: 10px;
+    display: block;
 }
 
 /* TJENESTER */
@@ -109,9 +107,36 @@ footer {
     font-size: 0.9rem;
 }
 
-/* MOBIL */
-@media (max-width: 900px) {
+/* ===== MOBIL ===== */
+@media (max-width: 768px) {
+
+    .hero {
+        height: 65vh;
+        background-position: center top;
+    }
+
+    .section {
+        padding: 50px 15px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    /* Fjern dekor på mobil */
+    .card::before {
+        display: none;
+    }
+
     .split {
         grid-template-columns: 1fr;
+        padding: 50px 15px;
+        gap: 25px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
     }
 }
