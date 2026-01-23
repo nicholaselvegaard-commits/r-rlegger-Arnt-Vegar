@@ -14,14 +14,10 @@ body {
 /* HERO */
 .hero {
     height: 85vh;
-    background-image: url("bakrunn.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-color: #061c2f;
+    background: url("bakrunn.png") center/cover no-repeat;
 }
 
-/* SEKSJONER */
+/* GENERELLE SEKSJONER */
 .section {
     padding: 80px 20px;
     display: flex;
@@ -73,43 +69,42 @@ body {
 img {
     width: 100%;
     border-radius: 10px;
-    display: block;
 }
 
-/* ===== TJENESTER – NY DESIGN ===== */
-.services-wrapper {
-    max-width: 1100px;
-    width: 100%;
+/* TJENESTER – STABIL */
+.services-section {
+    background: #061c2f;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.services-wrapper h2 {
+.services-section h2 {
     color: white;
     margin-bottom: 40px;
-    font-size: 2rem;
+    text-align: center;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 25px;
 }
 
 .service-item {
     background: white;
-    padding: 25px 28px;
+    padding: 25px;
     border-radius: 12px;
     border-left: 4px solid #4aa3df;
 }
 
 .service-item h3 {
-    font-size: 1.05rem;
     margin-bottom: 8px;
-    color: #061c2f;
+    font-size: 1rem;
 }
 
 .service-item p {
     font-size: 0.95rem;
-    line-height: 1.5;
     color: #334155;
 }
 
@@ -129,7 +124,6 @@ footer {
     text-align: center;
     color: rgba(255,255,255,0.6);
     padding: 40px 20px;
-    font-size: 0.9rem;
 }
 
 /* MOBIL */
@@ -159,7 +153,7 @@ footer {
         padding: 50px 15px;
     }
 
-    .services-wrapper h2 {
-        text-align: center;
+    .services-section {
+        padding: 60px 15px;
     }
 }
